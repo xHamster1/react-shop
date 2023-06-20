@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/mixins.scss';
+
+.item {
+	@apply rounded-md bg-white py-4;
+	@include shadow();
+	max-height: 300px;
+
+	&:hover {
+		h2: {
+			display: none;
+		}
+	}
+
+	h2 {
+		@apply inline-block bg-primary p-3 pr-10 text-3xl;
+		border-radius: 0 60px 60px 0;
+	}
+
+	.subcategory__list {
+		@apply flex flex-col flex-wrap items-start py-2 pl-9 text-xl;
+		max-height: 200px;
+		list-style: '— ';
+
+		li {
+			@apply transition-all;
+			width: 250px;
+			word-wrap: break-word;
+		}
+	}
+}

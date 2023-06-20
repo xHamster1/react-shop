@@ -1,0 +1,13 @@
+@import './../../../assets/styles/mixins.scss';
+
+.wrapper {
+	@apply grid px-6 py-8;
+	grid-template-columns: 1fr 18fr;
+	height: 100vh;
+
+	.content {
+		@apply overflow-y-scroll rounded-3xl;
+		@include shadow('lg', false);
+		z-index: 1;
+	}
+}

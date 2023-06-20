@@ -1,0 +1,78 @@
+.header {
+	@apply flex w-full grid-cols-4 flex-row bg-white px-6 py-3 flex-center-between;
+}
+.nav {
+	top: 0;
+	right: 100%;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: rgba(#000, 0.9);
+	backdrop-filter: blur(2px);
+	transform: translateY(0);
+	transition: 0.3s ease transform;
+}
+.isMenu {
+	@apply overflow-hidden;
+
+	transform: translate(100%);
+}
+.menu {
+	@apply lg:flex lg:flex-row lg:flex-center-center;
+	width: 800px;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 16px;
+	}
+
+	li {
+		@apply rounded-xl p-2 text-white transition-colors lg:mr-10 lg:text-black;
+
+		&:hover {
+			@apply text-primary;
+			background-color: #807e7ea1;
+		}
+	}
+
+	.active {
+	}
+}
+
+.contact {
+	@apply hidden items-center justify-center text-xl xl:flex xl:flex-col;
+
+	li {
+		@apply m-1;
+		a {
+			@apply flex flex-row transition-colors flex-center-left hover:text-primary;
+
+			svg {
+				@apply mr-3;
+			}
+		}
+	}
+}
+
+.toggle {
+	@apply flex cursor-pointer text-black lg:hidden;
+
+	align-items: center;
+	font-size: 2rem;
+	transition: 0.3s ease all;
+	position: relative;
+	z-index: 100;
+
+	// &:hover {
+	// 	color: ;
+	// }
+}

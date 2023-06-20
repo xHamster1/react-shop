@@ -1,0 +1,14 @@
+.file {
+	@apply m-auto;
+
+	> h1 {
+		@apply mb-5 text-xl font-semibold;
+	}
+
+	> label {
+		@apply block;
+		> input {
+			@apply block cursor-pointer text-sm text-gray file:mr-4 file:rounded-full file:border-0 file:bg-blue file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-blue;
+		}
+	}
+}

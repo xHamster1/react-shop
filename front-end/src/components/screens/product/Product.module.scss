@@ -1,0 +1,45 @@
+@import '../../../assets/styles/mixins.scss';
+
+.container {
+	@apply flex flex-row bg-white p-5;
+}
+
+.right {
+	@apply mr-4 w-1/2 rounded-lg;
+
+	.img {
+		@apply rounded-lg bg-white;
+		@include shadow();
+		width: 90%;
+
+		height: 600px;
+	}
+}
+
+.left {
+	.title {
+		@apply border-t-secondary text-3xl font-bold;
+	}
+
+	.subtitle {
+		@apply mb-3 text-xl font-medium;
+	}
+
+	.content {
+		@apply p-2 pl-0;
+		border-top: 3px solid #cdcdcd;
+		border-bottom: 3px solid #cdcdcd;
+
+		h3 {
+			@apply text-2xl font-semibold;
+		}
+
+		p {
+			@apply text-lg;
+		}
+	}
+
+	.bottem {
+		@apply p-3;
+	}
+}

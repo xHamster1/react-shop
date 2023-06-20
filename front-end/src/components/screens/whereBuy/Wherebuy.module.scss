@@ -1,0 +1,10 @@
+@import '../../../assets/styles/mixins.scss';
+
+.container {
+	@apply rounded-lg bg-white p-5 pl-0;
+	@include shadow();
+
+	h1 {
+		border-radius: 0 60px 60px 0;
+	}
+}

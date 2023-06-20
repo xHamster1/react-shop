@@ -1,0 +1,6 @@
+@import '../../../assets/styles/mixins.scss';
+
+.item {
+	@apply m-7 w-1/2 rounded-lg bg-white p-5;
+	@include shadow();
+}

@@ -1,0 +1,41 @@
+@import './../../../../assets/styles/mixins.scss';
+
+.admin_sidebar {
+	@apply relative;
+
+	> div {
+		@apply absolute flex w-full flex-col justify-between py-6;
+		background-color: #dae0fb;
+		background-image: linear-gradient(to right, #e0e4fb, #c7cced);
+		border-top-left-radius: 2rem;
+		border-bottom-left-radius: 2rem;
+		min-height: 500px;
+		top: 50%;
+		transform: translateY(-50%);
+		box-shadow: 0 10px 20px rgba(37, 12, 171, 0.3);
+
+		.logo {
+			@apply mx-auto mb-7 block;
+		}
+		.menu {
+			.item {
+				> a {
+					@apply mb-5 block text-2xl;
+
+					svg {
+						@apply mx-auto transition-colors;
+						fill: #1c2034;
+					}
+				}
+
+				&:hover svg {
+					fill: #666d91;
+				}
+
+				&.active svg {
+					@apply fill-primary;
+				}
+			}
+		}
+	}
+}

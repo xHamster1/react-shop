@@ -1,0 +1,19 @@
+.table_item {
+	@apply mb-3 flex-wrap rounded-md bg-white px-8 py-2 flex-center-between;
+	box-shadow: 0 4px 10px rgba(45, 8, 125, 0.2);
+
+	> span {
+		img {
+			@apply rounded;
+		}
+	}
+
+	> div {
+		> a {
+			@apply text-xl opacity-75 transition-opacity hover:opacity-100;
+		}
+		> button {
+			@apply text-xl text-fullred opacity-75 transition-opacity hover:opacity-100;
+		}
+	}
+}

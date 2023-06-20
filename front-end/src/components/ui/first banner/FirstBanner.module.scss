@@ -1,0 +1,53 @@
+.presentation {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+			45deg,
+			rgba(103, 0, 31, 0.9),
+			rgba(34, 101, 163, 0.7)
+		),
+		url('../../../../public/fon.jpg') no-repeat;
+	width: 100%;
+	height: 800px;
+	background-size: cover;
+	background-position: center center;
+	background-blend-mode: multiply;
+	color: #ffffff;
+	h1 {
+		@apply text-2xl font-bold sm:text-4xl md:text-5xl lg:text-6xl;
+	}
+
+	h3 {
+		@apply text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl;
+	}
+
+	.btn {
+		@apply px-12 py-2 text-xl sm:px-16 sm:py-3 sm:text-2xl md:px-20 md:py-4 md:text-3xl lg:px-24 lg:py-5 lg:text-4xl;
+
+		margin-top: 4rem;
+		text-decoration: none;
+		border: 1px solid;
+		background-color: #ff3863;
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: 0.2s;
+		color: #fff;
+		border: 1px solid #ff3863;
+
+		&:hover {
+			background-color: transparent;
+			color: #ff3863;
+			border: 1px solid #ff3863;
+		}
+
+		&:active {
+			transform: scale(0.98);
+			/* Scaling button to 0.98 to its original size */
+			box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+			/* Lowering the shadow */
+		}
+	}
+}
