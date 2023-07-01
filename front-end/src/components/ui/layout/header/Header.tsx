@@ -89,7 +89,7 @@ const Header: FC = () => {
 				<li>
 					<Link href={`tel:8-928-231-96-62`}>
 						<AiFillPhone />
-						8-928-231-96-62
+						8-401-264-20-43
 					</Link>
 				</li>
 				{/* <li>

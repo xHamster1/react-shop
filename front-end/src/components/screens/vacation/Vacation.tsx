@@ -79,7 +79,7 @@ const Vacation: FC = () => {
 										minLength: 4
 									})}
 									placeholder='Имя'
-									error={errors.name?.message}
+									error={errors.name}
 								/>
 								<Field
 									{...register('email', {
@@ -90,21 +90,21 @@ const Vacation: FC = () => {
 										}
 									})}
 									placeholder='Email'
-									error={errors.email?.message}
+									error={errors.email}
 								/>
 								<Field
 									{...register('phone', {
 										required: 'Обязательное поле'
 									})}
 									placeholder='Номер телефона'
-									error={errors.phone?.message}
+									error={errors.phone}
 								/>
 								<TextArea
 									{...register('message', {
 										required: 'Обязательное поле'
 									})}
 									placeholder='Расскажите о себе...'
-									error={errors.message?.message}
+									error={errors.message}
 								/>
 								<Button type='submit' variant='orange'>
 									Отправить предложение
