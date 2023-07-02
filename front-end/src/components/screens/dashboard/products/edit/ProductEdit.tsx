@@ -71,7 +71,7 @@ const ProductEdit: FC = () => {
 		CategoryService.getAll()
 	)
 
-	const [options, setOptions] = useState([''])
+	const [options, setOptions] = useState({})
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -87,7 +87,7 @@ const ProductEdit: FC = () => {
 		BrandService.getAll()
 	)
 
-	const [optionsbrand, setOptionsBrand] = useState([''])
+	const [optionsbrand, setOptionsBrand] = useState({})
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -103,7 +103,7 @@ const ProductEdit: FC = () => {
 		SubcategoryService.getAll()
 	)
 
-	const [optionssub, setOptionsSub] = useState([''])
+	const [optionssub, setOptionsSub] = useState({})
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -115,9 +115,9 @@ const ProductEdit: FC = () => {
 		getData()
 	}, [isLoading])
 
-	const getValue = (value: number) => {
-		value ? options.find(option => option.value === value) : ''
-	}
+	// const getValue = (value: number) => {
+	// 	value ? options.find(option => option.value === value) : ''
+	// }
 
 	return (
 		<Meta title='Редактирование товаров'>
@@ -172,7 +172,7 @@ const ProductEdit: FC = () => {
 												className='my-4 focus:outline-none'
 												options={options}
 												placeholder='Категория, к которой относиться'
-												value={getValue(value)}
+												// value={getValue(value)}
 												onChange={newValue =>
 													onChange((newValue as IOption).value)
 												}
@@ -195,7 +195,7 @@ const ProductEdit: FC = () => {
 												className='my-4 focus:outline-none'
 												options={optionssub}
 												placeholder='Подкатегория, к которой относиться'
-												value={getValue(value)}
+												// value={getValue(value)}
 												onChange={newValue =>
 													onChange((newValue as IOption).value)
 												}
@@ -218,7 +218,7 @@ const ProductEdit: FC = () => {
 												className='my-4 focus:outline-none'
 												options={optionsbrand}
 												placeholder='Партнер, к которому относиться'
-												value={getValue(value)}
+												// value={getValue(value)}
 												onChange={newValue =>
 													onChange((newValue as IOption).value)
 												}
