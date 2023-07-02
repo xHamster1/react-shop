@@ -58,7 +58,7 @@ const SubcategoryEdit: FC = () => {
 		CategoryService.getAll()
 	)
 
-	const [options, setOptions] = useState([''])
+	const [options, setOptions] = useState([{}])
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -70,9 +70,9 @@ const SubcategoryEdit: FC = () => {
 		getData()
 	}, [isLoading])
 
-	const getValue = (value: number) => {
-		value ? options.find(option => option.value === value) : ''
-	}
+	// const getValue = (value: number) => {
+	// 	value ? options.find(option => option.value === value) : ''
+	// }
 
 	return (
 		<Meta title='Редактирование подкатегории'>
@@ -102,7 +102,7 @@ const SubcategoryEdit: FC = () => {
 											className='my-4 focus:outline-none'
 											options={options}
 											placeholder='Категория, к которой относиться'
-											value={getValue(value)}
+											// value={getValue(value)}
 											onChange={newValue =>
 												onChange((newValue as IOption).value)
 											}
