@@ -71,7 +71,7 @@ const ProductEdit: FC = () => {
 		CategoryService.getAll()
 	)
 
-	const [options, setOptions] = useState({})
+	const [options, setOptions] = useState([{}])
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -87,7 +87,7 @@ const ProductEdit: FC = () => {
 		BrandService.getAll()
 	)
 
-	const [optionsbrand, setOptionsBrand] = useState({})
+	const [optionsbrand, setOptionsBrand] = useState([{}])
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
@@ -103,7 +103,7 @@ const ProductEdit: FC = () => {
 		SubcategoryService.getAll()
 	)
 
-	const [optionssub, setOptionsSub] = useState({})
+	const [optionssub, setOptionsSub] = useState([{}])
 	useEffect(() => {
 		const getData = async () => {
 			const arr: IOption[] = []
