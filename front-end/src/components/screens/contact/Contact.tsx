@@ -54,7 +54,7 @@ const Contact: FC = () => {
 								<p className='text-xl font-medium mb-7'>
 									Офис:
 									<Link href={`tel:8-928-231-96-62`} className='ml-5'>
-										?????
+										8-401-264-20-43
 									</Link>
 								</p>
 							</div>

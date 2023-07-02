@@ -33,8 +33,8 @@ const Maps = () => {
 					<FullscreenControl />
 					<RouteButton options={{ float: 'right' }} />
 					<SearchControl options={{ float: 'right' }} />
-					<TypeSelector options={{ float: 'right' }} />
-					<ZoomControl options={{ float: 'right' }} />
+					<TypeSelector />
+					<ZoomControl />
 					<Placemark
 						modules={['geoObject.addon.balloon']}
 						geometry={[55.670991, 37.304258]}
