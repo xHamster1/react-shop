@@ -59,7 +59,7 @@ const Partners: FC = () => {
 									minLength: 4
 								})}
 								placeholder='Имя'
-								error={errors.name?.message}
+								error={errors.name}
 							/>
 							<Field
 								{...register('companyName', {
@@ -67,7 +67,7 @@ const Partners: FC = () => {
 									minLength: 4
 								})}
 								placeholder='Название компании'
-								error={errors.companyName?.message}
+								error={errors.companyName}
 							/>
 							<Field
 								{...register('email', {
@@ -78,27 +78,28 @@ const Partners: FC = () => {
 									}
 								})}
 								placeholder='Email'
-								error={errors.email?.message}
+								error={errors.email}
 							/>
 							<Field
 								{...register('phone', {
 									required: 'Обязательное поле'
 								})}
 								placeholder='Номер телефона'
-								error={errors.phone?.message}
+								error={errors.phone}
 							/>
 							<TextArea
 								{...register('message', {
 									required: 'Обязательное поле'
 								})}
 								placeholder='Ваше предложение'
-								error={errors.message?.message}
+								error={errors.message}
 							/>
 							<Button type='submit' variant='orange'>
 								Отправить предложение
 							</Button>
 						</>
 					</form>
+					я
 				</section>
 			</Layout>
 		</Meta>

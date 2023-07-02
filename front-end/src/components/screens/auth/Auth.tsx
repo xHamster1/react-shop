@@ -13,7 +13,6 @@ import { IEmailPassword } from '@/store/user/user.interface'
 import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 
-import { useAuthRedirect } from './useAuthRedirect'
 import { validEmail } from './valid-email'
 
 const Auth: FC = () => {
@@ -65,7 +64,7 @@ const Auth: FC = () => {
 									}
 								})}
 								placeholder='Email'
-								error={errors.email?.message}
+								error={errors.email}
 							/>
 							<Field
 								{...formRegister('password', {
@@ -77,7 +76,7 @@ const Auth: FC = () => {
 								})}
 								type='password'
 								placeholder='Password'
-								error={errors.password?.message}
+								error={errors.password}
 							/>
 							<Button type='submit' variant='orange'>
 								Let's go!

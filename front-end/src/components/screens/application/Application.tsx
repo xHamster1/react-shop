@@ -18,8 +18,8 @@ import { IMailApplication } from '@/types/mail.interface'
 
 import { validEmail } from '../auth/valid-email'
 
-import styles from './Application.module.scss'
 import { MailService } from '@/services/mail.service'
+import styles from './Application.module.scss'
 
 const Aplication: FC = () => {
 	const { query, push } = useRouter()
@@ -73,7 +73,7 @@ const Aplication: FC = () => {
 								minLength: 4
 							})}
 							placeholder='Имя'
-							error={errors.name?.message}
+							error={errors.name}
 						/>
 						<Field
 							{...register('email', {
@@ -84,21 +84,21 @@ const Aplication: FC = () => {
 								}
 							})}
 							placeholder='Email'
-							error={errors.email?.message}
+							error={errors.email}
 						/>
 						<Field
 							{...register('phone', {
 								required: 'Обязательное поле'
 							})}
 							placeholder='Номер телефона'
-							error={errors.phone?.message}
+							error={errors.phone}
 						/>
 						<TextArea
 							{...register('message', {
 								required: 'Обязательное поле'
 							})}
 							placeholder='Ваше сообщение'
-							error={errors.message?.message}
+							error={errors.message}
 						/>
 						{items.length ? (
 							<div className='flex flex-row flex-center-center'>
