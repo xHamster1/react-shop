@@ -81,7 +81,7 @@ const Auth: FC = () => {
 							<Button type='submit' variant='orange'>
 								Let's go!
 							</Button>
-							<div>
+							{/* <div>
 								<button
 									type='button'
 									className='inline-block opacity-20 mt-3 text-sm'
@@ -91,7 +91,7 @@ const Auth: FC = () => {
 								>
 									{type === 'login' ? 'Register' : 'Login'}
 								</button>
-							</div>
+							</div> */}
 						</>
 					)}
 				</form>
