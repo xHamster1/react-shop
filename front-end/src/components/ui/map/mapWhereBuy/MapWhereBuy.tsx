@@ -44,8 +44,8 @@ const MapsWhereBuy = () => {
 					<FullscreenControl />
 					<RouteButton options={{ float: 'right' }} />
 					<SearchControl options={{ float: 'right' }} />
-					<TypeSelector options={{ float: 'right' }} />
-					<ZoomControl options={{ float: 'right' }} />
+					<TypeSelector />
+					<ZoomControl />
 
 					<Clusterer>
 						{points.map((item, idx) => (
