@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { SubmitHandler } from 'react-hook-form/dist/types'
@@ -22,6 +23,8 @@ const Auth: FC = () => {
 
 	const [type, setType] = useState<'login' | 'register'>('login')
 
+	const { replace } = useRouter()
+
 	const {
 		register: formRegister,
 		handleSubmit,
@@ -37,10 +40,9 @@ const Auth: FC = () => {
 		} else {
 			register(data)
 		}
+		replace('/')
 		reset()
 	}
-
-	// useAuthRedirect()
 
 	return (
 		<Meta title='Auth'>
