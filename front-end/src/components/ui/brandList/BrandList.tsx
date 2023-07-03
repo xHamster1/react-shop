@@ -30,7 +30,7 @@ const BrandList: FC = () => {
 						<Heading className='mb-5 inline-block bg-primary p-3 pr-10 text-3xl fo'>
 							Наши партнеры
 						</Heading>
-						<div className='flex flex-row flex-center-center pl-6'>
+						<div className='flex flex-col flex-center-center pl-6 lg:flex-row'>
 							{data.map(brand => (
 								<BrandListItem brand={brand} key={brand.id} />
 							))}
