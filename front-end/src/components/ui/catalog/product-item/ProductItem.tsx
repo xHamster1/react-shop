@@ -103,7 +103,8 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 														style={{
 															borderLeft:
 																index % 2 === 0 ? 'none' : '2px solid white',
-															paddingLeft: '0.5rem'
+															paddingLeft: '0.5rem',
+															display: index > 1 ? 'none' : 'block'
 														}}
 													>
 														{value.name}

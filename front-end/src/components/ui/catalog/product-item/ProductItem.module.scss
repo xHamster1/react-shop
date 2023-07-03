@@ -44,10 +44,9 @@
 				position: relative;
 				float: left;
 				.details {
-					@apply text-center text-xl font-semibold flex-center-center;
+					@apply overflow-hidden px-1 py-2 text-center text-xl font-semibold flex-center-center;
 					float: left;
 					width: 70%;
-					height: 100%;
 				}
 				.buy {
 					@apply flex-center-center;
